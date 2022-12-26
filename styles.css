@@ -1,0 +1,710 @@
+/* Defaults */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --accent-color: #4CC9F0;
+    --deep-purple: #3a0ca3;
+    --purple: #f72585;
+    --bg-color: #0D1227;
+}
+
+body {
+    background: url("images/Dotted-background-final.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img {
+    display: block;
+}
+
+.pg-padding {
+    padding: 0 200px;
+}
+
+.heading {
+    font-family: 'Reem Kufi Fun', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    color: #fff;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* NAVBAR SECTION */
+
+#header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    margin-bottom: 100px;
+    background-color: rgba(13,18,39,1);
+    z-index: 100;
+    box-shadow: 0px 0px 3px 0px #000;
+}
+
+#header ul {
+    display: flex;
+}
+
+#header ul a {
+    color: #fff;
+    padding: 0 40px;
+}
+
+#header ul a:hover,
+#header ul a.active {
+    color: var(--accent-color);
+    transition: 0.5s;
+}
+
+#header img {
+    width: 50px;
+    cursor: pointer;
+}
+
+#header button {
+    color: #fff;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#header button:hover {
+    scale: 1.05;
+    background-color: var(--accent-color);
+    font-weight: 400;
+    border: 1px solid var(--accent-color);
+}
+
+#header .mobile-cv-button {
+    display: none;
+}
+
+#mobile, 
+#close {
+    display: none;
+}
+/* ------------------------------------------------ */
+/* HERO SECTION */
+
+#hero {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 250px;
+    /* height: 90vh; */
+}
+
+#hero h1 {
+    font-size: 5.3124vw;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    left: -6px;
+}
+
+#hero h3 {
+    font-size: 25px;
+    position: relative;
+    bottom: 10px;
+}
+
+#hero h4 {
+    font-size: 1.125vw;
+    font-weight:300;
+    letter-spacing: 0.8px;
+    position: absolute;
+}
+
+#hero h3, h4 {
+    color: #B6C4D9;
+}
+
+
+#hero h1, h3, h4 {
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+
+/* #hero .details {
+    width: 48%;
+} */
+
+#hero .hero-image {
+    width: 45%;
+}
+
+#hero .hero-image img {
+    width: 100%;
+}
+
+#hero p {
+    text-align: justify;
+    max-width: 500px;
+    font-weight: 300;
+    font-size: 1.1vw;
+}
+
+#hero .con-icons a {
+    color: #fff;
+    display: inline-flex;
+    font-size: 15px;
+    padding: 8px;
+    margin: 10px 5px 20px 0px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+#hero .con-icons a:hover {
+    background-color: #fff;
+    color: #0D1227; 
+}
+
+#hero button {
+    background: linear-gradient(to bottom, rgba(247, 37, 133, 0.31), rgba(247, 37, 133, 0.11));
+    color: #fff;
+    padding: 8px 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#hero button:hover {
+    filter: brightness(80%);
+    color: #fff;
+}
+
+/* --------------------------------------------------- */
+/* ABOUT SECTION */
+
+#about {
+    background-image: url(/images/about-planet.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 150px;
+}
+
+#about h1 {
+    padding-top: 115px;
+    color: var(--deep-purple);
+    position: relative;
+}
+
+#about h3 {
+    font-family: 'Montserrat Alternates';
+    text-align: center;
+    color: var(--deep-purple);
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+#about .heading::before {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #fcc431;
+    position: absolute;
+    right: 47.5%;
+    top: 66%;
+}
+
+#about .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+#about .content .about-image {
+    width: 30%;
+}
+
+#about .content img {
+    width: 100%;
+    transform: scaleX(-1);
+    height: auto;
+}
+
+#about .content p {
+    width: 48%;
+    font-size: 1.2vw;
+    color: var(--deep-purple);
+    text-align: justify;
+}
+
+
+
+#about .flip-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#about .satellite-container {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#about .satellite-container .satellite {
+    width: 100px;
+    height: 100px;
+    background: var(--deep-purple);
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 50%;
+    display: table;
+}
+
+#about .satellite span {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#about .tools-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 63px
+}
+
+#about .item {
+    display: flex;
+    flex-direction: column;
+    color: #371A45;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#about .item span {
+    font-size: 11px;
+}
+
+#about .item i {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    margin-bottom: 5px;
+    border: 1px solid #371A45;
+    border-radius: 50%;
+}
+
+#about .item i:hover {
+    transform: scale(1.2);
+}
+
+/* ---------------------------------------------------- */
+/* PROJECTS SECTION */
+
+#projects .heading h1 {
+}
+
+#projects h1,
+#contact h1 {
+    margin-bottom: 80px;
+    color: var(--accent-color);
+    position: relative;
+
+}
+
+#projects .heading::before {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #fcc431;
+    position: absolute;
+    right: 47%;
+    top: -40%;
+}
+
+#projects .project-container .project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+
+#projects .project-image {
+    width: 55%;
+}
+
+#projects img {
+    width: 100%;
+    box-shadow: -20px 0px 40px -11px rgba(0, 0, 0, 0.25);
+    border-radius: 15px 0px 0px 0px;
+}
+
+#projects .project-card {
+    width: 45%;
+    position: relative;
+    padding: 40px 20px 30px 20px;
+    height: 325px;
+    background: linear-gradient(121.01deg, rgba(247, 37, 133, 0.11) 2.24%, rgba(76, 201, 240, 0.05) 99.53%);
+    border-radius: 0px 15px 0px 0px;
+    box-shadow: 20px 0px 40px -11px rgba(0, 0, 0, 0.4);
+}
+
+#projects .project-card.reverse {
+    border-radius: 15px 0px 0px 0px;
+    box-shadow: -20px 0px 40px -11px rgba(0, 0, 0, 0.4);
+
+}
+
+#projects img.reverse {
+    border-radius: 0px 15px 0px 0px;
+    box-shadow: 20px 0px 40px -11px rgba(0, 0, 0, 0.25);
+
+}
+
+#projects .project-card p {
+    text-align: justify;
+    font-weight: 300;
+    font-size: .8125rem;
+}
+
+#projects .project-card p.details {
+    margin-bottom: 30px;
+}
+
+#projects .project-card p.info {
+    color: var(--accent-color);
+}
+
+#projects .project-card h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+#projects .project-card .launch-git {
+    position: absolute;
+    top: 85%;
+    right: 6%;
+}
+
+#projects .project-card.reverse .launch-git {
+    top: 85%;
+    right: 85%;
+}
+
+#projects .project-card a {
+    color: #fff;
+    justify-content: space-between;
+    padding-left: 3px;
+}
+
+/* ---------------------------------------------------- */
+/* CONTACT SECTION */
+#contact {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+
+#contact .heading h1 {
+    position: relative;
+
+}
+
+#contact .heading::before {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #fcc431;
+    position: absolute;
+    right: 47%;
+    top: -40%;
+}
+
+#contact p {
+    font-family: 'Reem Kufi Fun', sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    position: absolute;
+    top: 49%;
+    right: 44%;
+}
+
+
+#contact .rocket {
+    width: 15%;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 32%;
+    /* z-index: -1; */
+    rotate: -19deg;
+}
+
+#contact .cloudy-earth img {
+    display: flex;
+    width: 42%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+} 
+
+#contact input {
+    border: none;
+    padding: .45875rem 0;
+    padding-left: 15px;
+    background: #E9EBEE;
+    border-radius: 50px;
+    position: absolute;
+    top: 63.5%;
+    left: 32%;
+    width: 15%;
+    outline: none;
+}
+
+#contact input:focus {
+    outline: none;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact input:focus::placeholder {
+    color: transparent;
+}
+
+/* ---------------------------------------------------------- */
+/* FOOTER SECTION  */
+
+
+#footer {
+    height: 100px;
+    background-color: #0A0E1F;
+    padding: 10px 40px;
+    position: relative;
+}
+
+footer img {
+    width: 60px;
+}
+
+footer p,
+footer span {
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size: 8px;
+    text-align: center;
+    /* padding-bottom: 5px; */
+}
+
+footer span {
+    color: var(--accent-color);
+}
+
+footer .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+footer .socials i {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 25px;
+}
+
+.astronaut {
+    width: 20%;
+    position: absolute;
+    top: -200px;
+    right: 56px;;
+    transform: scaleX(-1);
+    rotate: -20deg;
+}
+
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* RESPONSIVE SECTION */
+
+@media (max-width: 799px) {
+    .pg-padding {
+        padding: 0 80px;
+    }
+/* ------------------------------- */
+/* Header Section */
+    #header {
+        padding: 20px 80px;
+        align-items: center;
+    }
+
+    #header ul a {
+        color: #fff;
+        padding: 0 20px;
+        font-size: smaller;
+    }
+
+    #hero h4 {
+        font-size: 15px;
+    }
+
+    #hero h1 {
+        font-size: 54px;
+        left: -3px;
+        top: 3px;
+    }
+
+    #hero h3 {
+        font-size: 23px;
+    }
+
+    #hero p {
+        width: 95%;
+        font-size: 13px;
+    }
+
+    #hero .hero-image img {
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media (max-width: 477px) {
+
+    #header {
+        padding: 10px 20px;
+        justify-content: space-between;
+    }
+
+    #header img {
+        width: 50px;
+        height: 24px;
+        cursor: pointer;
+    }
+
+    #navlist {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: fixed;
+        padding-top: 50px;
+        right: -300px;
+        top: 0px;
+        width: 300px;
+        height: 100vh;
+        background: url(images/Dotted-background-final.png);
+        box-shadow: -2px 0px 2px 1px rgb(0 0 0 / 10%);z-index: 1;
+        transition: 0.3s;
+    }
+
+    #navlist.active {
+        right: 0px;
+    }
+
+    #navlist li {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    #header .cv-button {
+    display: none;
+    }
+    
+    #header button {
+        padding: 10px 15px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    #header .mobile-cv-button {
+        display: initial;
+    }
+
+    #mobile, 
+    #close {
+        display: initial;
+    }
+
+    #mobile i {
+        color: #fff;
+        font-size: 25px;
+    }
+
+    #close {
+        position: absolute;
+        top: 12px;
+        right: 0px;
+    }
+
+    #close i {
+        font-size: 25px;
+    }
+
+
+    /* ----------------------------------- */
+    /* Hero Section */
+    #hero {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #hero .detaails {
+        width: 100%;
+    }
+    
+    .pg-padding {
+        padding: 0 20px;
+    }
+    
+    #hero .hero-image {
+        width: 100%;
+        position: relative;
+    }
+
+    #hero .hero-image img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: -50px;
+        /* opacity: 0.9; */
+    }
+}
+
+
