@@ -254,7 +254,10 @@ p {
 #about .content p {
     width: 48%;
     font-size: 1.2vw;
-    color: var(--deep-purple);
+    /* color: var(--deep-purple); */
+    background: linear-gradient(110.67deg, #3A0CA3 1.54%, #F72585 95.86%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: justify;
 }
 
@@ -300,15 +303,11 @@ p {
 #about .item {
     display: flex;
     flex-direction: column;
-    color: #371A45;
+    color: var(--purple);
     text-align: center;
     align-items: center;
     margin-bottom: 15px;
     cursor: pointer;
-}
-
-#about .item span {
-    font-size: 11px;
 }
 
 #about .item i {
@@ -316,9 +315,14 @@ p {
     height: 30px;
     padding: 6px;
     margin-bottom: 5px;
-    border: 1px solid #371A45;
+    border: 1px solid var(--purple);
     border-radius: 50%;
 }
+
+#about .item span {
+    font-size: 11px;
+}
+
 
 #about .item i:hover {
     transform: scale(1.2);
