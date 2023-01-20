@@ -13,3 +13,4 @@ if (close) {
         navlist.classList.remove('active')
     })
 }
+

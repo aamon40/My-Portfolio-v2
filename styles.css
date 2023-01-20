@@ -8,6 +8,7 @@
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
+  /* background: rgb(0 100 0 / 20%); */
 }
 
 :root {
@@ -184,12 +185,14 @@ p {
   display: flex;
   position: relative;
   align-items: center;
-  margin-bottom: 150px;
-  /* height: 90vh; */
+  margin-bottom: 100px;
+  gap: 2%;
+  justify-content: center;
+  height: 100vh;
 }
 
 #hero h1 {
-  font-size: 5.3124vw;
+  font-size: clamp(3rem, 4.8vw, 4rem);
   font-weight: 500;
   color: #fff;
   position: relative;
@@ -220,9 +223,9 @@ h4 {
   font-family: "Reem Kufi Fun", sans-serif;
 }
 
-/* #hero .details {
-    width: 48%;
-} */
+#hero .details {
+  width: 50%;
+}
 
 #hero .hero-image {
   width: 45%;
@@ -236,7 +239,7 @@ h4 {
   text-align: justify;
   max-width: 500px;
   font-weight: 300;
-  font-size: 1.1vw;
+  font-size: clamp(0.8rem, 1vw, 1rem);
 }
 
 #hero .con-icons a {
@@ -279,9 +282,18 @@ h4 {
 /* ABOUT SECTION */
 
 #about {
+  /* background-image: url(/images/about-planet.png);
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-position: center;
+  margin-bottom: 150px; */
+  padding: 0;
+}
+
+#about .bg-moon {
   background-image: url(/images/about-planet.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 1000px;
   background-position: center;
   margin-bottom: 150px;
 }
@@ -290,6 +302,9 @@ h4 {
   padding-top: 115px;
   color: var(--deep-purple);
   position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #about h3 {
@@ -300,40 +315,48 @@ h4 {
   font-size: 13px;
 }
 
-#about .heading::before {
+#about .heading::before,
+#projects .heading::before,
+#contact .heading::before {
   content: "";
   width: 35px;
   height: 4px;
   background: #fcc431;
   position: absolute;
-  right: 47.5%;
-  top: 66%;
+  top: -35%;
+  right: 50%;
+  transform: translateX(50%);
 }
 
-#about .content {
+#about .heading::before {
+  top: 105px;
+}
+
+#about .details {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  column-gap: 5%;
   width: 100%;
-  margin-top: 100px;
-  margin-bottom: 60px;
+  margin-top: 20px;
+  margin-bottom: 05px;
+  padding: 50px;
 }
 
-#about .content .about-image {
+#about .details .about-image {
   width: 30%;
 }
 
-#about .content img {
+#about .details img {
   width: 100%;
   transform: scaleX(-1);
+  filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.3));
   height: auto;
 }
 
-#about .content p {
+#about .details p {
   width: 48%;
-  font-size: 1.2vw;
-  /* color: var(--deep-purple); */
+  font-size: clamp(0.8rem, 1vw, 1rem); /* color: var(--deep-purple); */
   background: linear-gradient(110.67deg, #3a0ca3 1.54%, #f72585 95.86%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -345,8 +368,8 @@ h4 {
   position: relative;
   cursor: pointer;
   /* background: #3a0ca3; */
-  height: 100px;
-  width: 100px;
+  height: 120px;
+  width: 120px;
 }
 
 #about .card {
@@ -361,8 +384,6 @@ h4 {
 
 #about .card:hover {
   transform: rotateY(180deg);
-  outline: 2px dashed var(--deep-purple);
-  outline-offset: 5px;
 }
 
 #about .front {
@@ -380,8 +401,8 @@ h4 {
 }
 
 #about .flip-image img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 
@@ -391,21 +412,87 @@ h4 {
 }
 
 #about .satellite-container .satellite {
-  width: 150px;
-  height: 150px;
-  background: var(--deep-purple);
+  width: 120px;
+  height: 120px;
+  position: relative;
   margin: 0 auto;
   text-align: center;
   border-radius: 50%;
-  display: table;
+  box-shadow: 0 0 10px 2px rgb(0 0 0 / 50%);
+  justify-content: center;
+  overflow: hidden;
 }
 
-#about .satellite span {
+/* ---------hover---------- */
+#about .satellite:hover .content p {
+  transform: translateY(0);
+}
+
+#about .satellite:hover .title {
+  opacity: 0;
+}
+
+#about .satellite:hover .bg-image-box img {
+  /* opacity: 0.5; */
+  filter: brightness(70%);
+  transform: scale(1.3) rotate(15deg);
+}
+/* -----------end-hover--------- */
+
+#about .satellite .bg-image-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+#about .satellite .content {
+  margin: auto 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem;
+}
+
+#about .satellite .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0;
+  position: absolute;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+#about .title img {
+  width: 20px;
+  transform: rotateX(180deg);
+  filter: invert(100%);
+}
+
+#about .content p {
+  margin: 0;
+  color: #fff;
+  font-size: 0.5rem;
+  transition: 0.3s;
+  font-weight: 500;
+  /* font-style: italic; */
+  text-align: center;
+  transform: translateY(120px);
+}
+
+#about .satellite h2 {
   color: #fff;
   text-transform: uppercase;
   font-size: 10px;
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .plansat img {
@@ -417,7 +504,7 @@ h4 {
   grid-template-columns: repeat(4, 1fr);
   width: 50%;
   margin: 0 auto;
-  padding-bottom: 63px;
+  padding-bottom: 150px;
 }
 
 #about .item {
@@ -437,6 +524,7 @@ h4 {
   margin-bottom: 5px;
   border: 1px solid var(--purple);
   border-radius: 50%;
+  transition: 0.2s;
 }
 
 #about .item span {
@@ -454,9 +542,12 @@ h4 {
   margin-bottom: 80px;
   color: var(--accent-color);
   position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-#projects .heading::before {
+/* #projects .heading::before {
   content: "";
   width: 35px;
   height: 4px;
@@ -464,7 +555,7 @@ h4 {
   position: absolute;
   right: 47%;
   top: -40%;
-}
+} */
 
 #projects .project {
   align-items: center;
@@ -475,6 +566,7 @@ h4 {
   width: 100%;
   box-shadow: -20px 0px 40px -11px rgba(0, 0, 0, 0.25);
   border-radius: 15px 15px 0px 0px;
+  min-height: 335px;
 }
 
 #projects .main-project-card {
@@ -483,7 +575,7 @@ h4 {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   grid-column-gap: 20px;
-  padding: 20px;
+  padding: 0 20px;
   background: linear-gradient(
     121.01deg,
     rgba(247, 37, 133, 0.11) 2.24%,
@@ -491,9 +583,10 @@ h4 {
   );
   border-radius: 15px 15px 0px 0px;
   box-shadow: 20px 0px 40px -11px rgba(0, 0, 0, 0.4);
+  align-items: center;
 }
 
-.main-project-card img {
+.main-project-card .img-box {
   grid-area: 2 / 1 / 12 / 8;
 }
 
@@ -560,9 +653,12 @@ h4 {
 #contact h1 {
   color: var(--accent-color);
   position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-#contact .heading::before {
+/* #contact .heading::before {
   content: "";
   width: 50px;
   height: 4px;
@@ -570,7 +666,7 @@ h4 {
   position: absolute;
   right: 47%;
   top: -40%;
-}
+} */
 
 #contact p {
   font-family: "Reem Kufi Fun", sans-serif;
@@ -674,29 +770,35 @@ footer .socials i {
 /* RESPONSIVE SECTION */
 
 /* TABLETS */
-@media (max-width: 799px) {
+@media (max-width: 810px) {
   .pg-padding {
     padding: 0 80px;
   }
   /* ------------------------------- */
   /* Header Section */
   #header {
-    padding: 20px 80px;
+    padding: 10px 40px;
     align-items: center;
   }
 
   #header ul a {
     color: #fff;
     padding: 0 20px;
-    font-size: smaller;
+    font-size: 0.7rem;
+  }
+  #header button {
+    font-size: 0.7rem;
   }
 
+  #hero .details {
+    width: 50%;
+  }
   #hero h4 {
     font-size: 15px;
   }
 
   #hero h1 {
-    font-size: 54px;
+    font-size: 2rem;
     left: -3px;
     top: 3px;
   }
@@ -710,17 +812,21 @@ footer .socials i {
     font-size: 13px;
   }
 
+  #hero .hero-image {
+    width: 50%;
+  }
+
   #hero .hero-image img {
-    width: 300px;
+    width: clamp(168px, 100%, 300px);
     height: auto;
   }
 
   /* ---------------------------------- */
   /* About Section */
 
-  /* #about h1 {
-    top: 49px;
-  } */
+  #about {
+    background-size: 800px;
+  }
 
   #about .heading::before,
   #projects .heading::before {
@@ -738,17 +844,6 @@ footer .socials i {
 
   #about .satellite-container {
     /* margin-bottom: 50px; */
-  }
-
-  #about .satellite-container .satellite {
-    width: 90px;
-    height: 90px;
-  }
-
-  #about .flip-image img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
   }
 
   #about .item {
@@ -784,7 +879,7 @@ footer .socials i {
 }
 /* -----------++++++++++++------------------- */
 /* MOBILE PHONES */
-@media (max-width: 477px) {
+@media (max-width: 599px) {
   #header {
     padding: 10px 20px;
     justify-content: space-between;
@@ -866,9 +961,10 @@ footer .socials i {
     flex-direction: column;
     margin-bottom: 0;
     height: 80vh;
+    justify-content: revert;
   }
 
-  #hero .detaails {
+  #hero .details {
     width: 100%;
   }
 
@@ -908,34 +1004,36 @@ footer .socials i {
     font-size: 1rem;
   }
 
-  #about .heading::before,
+  /* #about .heading::before,
   #projects .heading::before {
     right: 45%;
-  }
+  } */
 
-  #about .heading::before {
+  /* #about .heading::before {
     top: 50%;
-  }
+  } */
 
-  #about .content {
+  #about .details {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  #about .content .about-image {
+    padding: 0 20px;
     width: 100%;
   }
 
-  #about .content img {
+  #about .details .about-image {
+    width: 100%;
+  }
+
+  #about .details img {
     width: 60%;
     margin: 0 auto;
     margin-bottom: 20px;
     filter: drop-shadow(0px 6px 3px rgba(0, 0, 0, 0.3));
   }
 
-  #about .content p {
+  #about .details p {
     width: 100%;
     font-size: 0.8125rem;
   }
@@ -996,17 +1094,18 @@ footer .socials i {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(12, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-row-gap: 20px;
     border-radius: 15px 15px 15px 15px;
+    align-items: normal;
+    padding: 20px;
   }
 
-  #projects img {
-    width: 100%;
-  }
-
-  .main-project-card img {
+  .main-project-card .img-box {
     grid-area: 1 / 1 / 7 / 7;
+  }
+
+  #projects .img-box img {
+    width: 100%;
   }
 
   #projects .details {
@@ -1016,7 +1115,7 @@ footer .socials i {
   #projects .project-card p {
     text-align: justify;
     font-weight: 300;
-    font-size: 0.8125rem;
+    font-size: clamp(0.7rem, 1.1vw, 0.8125rem);
   }
 
   #projects .project-card p.details {

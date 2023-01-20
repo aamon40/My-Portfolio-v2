@@ -13,22 +13,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;300;500;700&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100&family=Reem+Kufi+Fun:wght@200;300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="styles.css">
     <title>Nyore Achoja's Portfolio</title>
 </head>
 <body>
     <!-- Navigation -->
     <section id="header">
-        <img src="images/Logo.svg" alt="">
+        <a href="#hero" >
+
+            <img class="fadeDown" style="transition-delay: 0ms;" src="images/Logo-blue.png" alt="">
+        </a>
         <div class="nav-list">
             <ul id="navlist">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contacts</a></li>
+                <li class="fadeDown" style="transition-delay: 200ms" ><a href="#hero" class="active" >Home</a></li>
+                <li class="fadeDown" style="transition-delay: 400ms"><a href="#about">About</a></li>
+                <li class="fadeDown" style="transition-delay: 600ms"><a href="#projects" >Projects</a></li>
+                <li class="fadeDown" style="transition-delay: 800ms"><a href="#contact" >Contacts</a></li>
 
-                <div class="cv-button mobile-cv-button">
-                    <button>Download CV</button>
+                <div class="cv-button mobile-cv-button fadeDown">
+                    <button >Download CV</button>
                 </div>
                 <a href="#" id="close"><i class='bx bx-x'></i></a>
             </ul>
@@ -45,32 +50,33 @@
     <!-- Hero Section -->
     <section id="hero" class="pg-padding">
         <div class="details">
-            <h4>Hello, I'm</h4>
-            <h1>Nyore Achoja</h1>
-            <h3>I build stuff for the web</h3>
-            <p>I combine a passion for good design and web development skills to create remarkably refreshing web apps.</p>
+            <h4 style="animation:fadeUp 1000ms;">Hello, I'm</h4>
+            <h1 style="animation:fadeUp 1200ms;">Nyore Achoja</h1>
+            <h3 style="animation:fadeUp 1400ms;">I build stuff for the web</h3>
+            <p style="animation:fadeUp 1600ms;">I combine a passion for good design and web development skills to create remarkably refreshing web apps.</p>
             <div class="con-icons">
-                <a href=""><i class='bx bxl-github' ></i></a>
-                <a href=""><i class='bx bxl-linkedin' ></i></a>
-               <a href=""><i class='bx bxs-envelope' ></i></a> 
+                <a href="" class="slide-in-fwd-bottom"><i class='bx bxl-github' ></i></a>
+                <a href="" class="slide-in-fwd-bottom"><i class='bx bxl-linkedin' ></i></a>
+               <a href="" class="slide-in-fwd-bottom"><i class='bx bxs-envelope' ></i></a> 
             </div>
-            <a href="#projects"><button>see my work</button></a>
+            <a href="#projects"><button class="slide-in-fwd-bottom">see my work</button></a>
         </div>
 
         <div class="hero-image">
-            <img src="/images/Hero Image.png" alt="">
+            <img class="slide-in-fwd-bottom" src="/images/floating-astronaut.jpg" alt="" >
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="pg-padding">
-        <h1 class="heading">about me</h1>
-        <div class="content">
-            <div class="about-image">
-                <img src="/images/coding on a rock.png" alt="">
+        <div class="bg-moon">
+        <h1 class="heading" data-aos="fade-up">about me</h1>
+        <div class="details">
+            <div class="about-image" data-aos="fade-right">
+                <img src="/images/coding on a rock.png" alt="" >
             </div>
 
-            <p class="about">My foray into software development started with a Python course in University
+            <p class="about" data-aos="fade-left">My foray into software development started with a Python course in University
                 where I learned the basics of programming. From that moment on, I got hooked
                 and used every resource I could lay my hands on to improve my IT and
                 programming skills. My current focus is on continually learning and and building
@@ -79,25 +85,61 @@
                 where I learned the basics of programming.</p>
         </div>
         <div class="satellite-container">
-            <div class="satellite">
-                <i></i>
-                <span>development</span>
+            <div class="satellite" data-aos="zoom-in-right">
+
+                <div class="bg-image-box">
+                     <img src="./images/galaxy-purple.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="title">
+                        <img src="./images/art-brush-design-icon.svg" alt="">
+                        <h2>development</h2>
+                    </div>
+
+                    <p>
+                        some shit about why I love design Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Illum, similique. Aliquid cumque alias
+                        nisi laudantium.
+                    </p>
+                </div>
             </div>
 
-            <div class="flip-image">
-                <img src="/images/about-pic-bw.jpg" alt="">
+            <div class="flip-image" data-aos="zoom-in">
+                <div class="card">
+                    <div class="front"> <img src="/images/astro-coffee-crop.png" alt=""></div>
+                    <div class="back"> <img src="./images/new-about-img.jpg" alt="">
+                    </div>
+                </div>
             </div>
 
-            <div class="satellite">
-                <i></i>
-                <span>design</span>
+            <div class="satellite" data-aos="zoom-in-left">
+
+                <div class="bg-image-box">
+                     <img src="./images/pexels-alex-andrews-821644.jpg" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="title">
+                        <img src="./images/art-brush-design-icon.svg" alt="">
+                        <h2>design</h2>
+                    </div>
+
+                    <p>
+                        some shit about why I love design Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Illum, similique. Aliquid cumque alias
+                        nisi laudantium.
+                    </p>
+                </div>
             </div>
         </div>
-
-        <h3>Tools I work with</h3>
+        <div class="plansat">
+            <img src="./images/Plansats.png" alt="">
+        </div>
+        <h3 data-aos="fade-up">Tools I work with</h3>
 
         <div class="tools">
-            <div class="tools-container">
+            <div class="tools-container" data-aos="fade-up">
 
                 <div class="item">
                     <i class="devicon-javascript-plain"></i>
@@ -149,6 +191,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </section>
 
     <!-- Project Section -->
@@ -157,30 +200,15 @@
          
        <div class="project-container">
 
-            <div class="project">
-                <div class="project-image">
-                    <img src="/images/project snapshot.png" alt="" class="snapshot">
-                </div>
-                
-                <div class="project-card">
+        <div class="main-project-card">
 
-                    <h3>Portfolio website</h3>
-                    <p class="details">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
+            <div class="img-box">
+                <img src="images/project snapshot.png" alt="">
 
-                    <p class="info">aut fugit, sed quia consequuntur magni dolores eos qui ratione</p>
-                    
-                    <div class="launch-git">
-                        <a href=""><i class='bx bx-rocket' ></i></a>
-                        <a href=""><i class='bx bxl-github' ></i></a>
-                    </div>
-
-                </div>
             </div>
-           
-            <div class="project">
 
-                <div class="project-card reverse">
-
+            <div class="details">
+                <div class="project-card">
                     <h3>E-commerce website</h3>
                     <p class="details">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
                     <p class="info">aut fugit, sed quia consequuntur magni dolores eos qui ratione</p>
@@ -189,73 +217,9 @@
                         <a href=""><i class='bx bx-rocket' ></i></a>
                         <a href=""><i class='bx bxl-github' ></i></a>
                     </div>
-
-                </div>
-
-                <div class="project-image">
-                    <img class="reverse" src="/images/e-commerce snapshot.png" alt="" class="snapshot">
-                </div>
-
-            </div>
-
-            <div class="project">
-                <div class="project-image">
-                    <img src="/images/project snapshot.png" alt="" class="snapshot">
-                </div>
-                
-                <div class="project-card">
-
-                    <h3>Portfolio website</h3>
-                    <p class="details">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
-                    <p class="info">aut fugit, sed quia consequuntur magni dolores eos qui ratione</p>
-
-                    <div class="launch-git">
-                        <a href=""><i class='bx bx-rocket' ></i></a>
-                        <a href=""><i class='bx bxl-github' ></i></a>
-                    </div>
-
                 </div>
             </div>
-
-            <div class="project">
-
-                <div class="project-card reverse">
-
-                    <h3>E-commerce website</h3>
-                    <p class="details">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
-                    <p class="info">aut fugit, sed quia consequuntur magni dolores eos qui ratione</p>
-
-                    <div class="launch-git">
-                        <a href=""><i class='bx bx-rocket' ></i></a>
-                        <a href=""><i class='bx bxl-github' ></i></a>
-                    </div>
-
-                </div>
-
-                <div class="project-image">
-                    <img class="reverse" src="/images/e-commerce snapshot.png" alt="" class="snapshot">
-                </div>
-
-            </div>
-
-            <div class="project">
-                <div class="project-image">
-                    <img src="/images/project snapshot.png" alt="" class="snapshot">
-                </div>
-                
-                <div class="project-card">
-
-                    <h3>Portfolio website</h3>
-                    <p class="details">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
-                    <p class="info">aut fugit, sed quia consequuntur magni dolores eos qui ratione</p>
-
-                    <div class="launch-git">
-                        <a href=""><i class='bx bx-rocket' ></i></a>
-                        <a href=""><i class='bx bxl-github' ></i></a>
-                    </div>
-
-                </div>
-            </div>
+        </div>
 
        </div>
     </section>
@@ -264,11 +228,10 @@
     <section id="contact" class="pg-padding">
         <h1 class="heading">contact me</h1>
         <div class="cloudy-earth">
-            <img src="images/cloudy-earth.png" alt="">
+            <img src="images/planet + rocket_cropped.png" alt="">
             <p class="message">Feel free to contact me <br> or just drop a message</p>
             <input type="text" placeholder="Your message">
         </div>
-        <img class="rocket" src="/images/rocket-launch.png" alt="">
 
         <i></i>
 
@@ -277,7 +240,7 @@
     
     <footer id="footer">
         <div class="foot">
-            <img src="images/Logo.svg" alt="">
+            <img src="images/Logo-blue.png" alt="">
             <div class="socials">
                 <i class='bx bxl-github'></i>
                 <i class='bx bxl-linkedin'></i>
@@ -290,5 +253,9 @@
         </footer>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
